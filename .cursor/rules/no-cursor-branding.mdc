@@ -1,0 +1,9 @@
+---
+description: Do not add Cursor or editor watermarks or promotional footers to user projects
+alwaysApply: true
+---
+
+# No tooling branding
+
+- Never add footers, trailers, badges, or visible text such as "Made with Cursor", "MADE WITH CURSOR", or similar editor/IDE attribution to UI, HTML, README, or comments unless the user explicitly asks for it.
+- Do not add hidden metadata or strings whose only purpose is to credit the coding tool.
