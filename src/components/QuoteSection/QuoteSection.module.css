@@ -1,0 +1,34 @@
+.section {
+  display: flex;
+  justify-content: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-section-y) var(--space-section-x);
+  background: var(--color-white);
+}
+
+.inner {
+  max-width: 46.1875rem;
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  font-style: italic;
+  line-height: 1.25;
+  letter-spacing: 0.005em;
+  color: var(--color-text);
+  text-align: center;
+}
+
+.inner p {
+  margin: 0 0 clamp(0.75rem, 2vw, 1rem);
+}
+
+.inner p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .inner {
+    font-size: var(--text-md);
+    text-align: left;
+  }
+}

@@ -1,0 +1,77 @@
+/* Локальные шрифты (npm @fontsource), без внешних запросов */
+@import '@fontsource/abeezee/400.css';
+@import '@fontsource/abeezee/400-italic.css';
+@import '@fontsource/noto-sans/cyrillic-400.css';
+@import '@fontsource/noto-sans/cyrillic-400-italic.css';
+@import '@fontsource/noto-sans/cyrillic-ext-400.css';
+@import '@fontsource/noto-sans/cyrillic-ext-400-italic.css';
+
+:root {
+  --color-cream: #f4f9e2;
+  --color-text: #22356f;
+  --color-cyan: #62d0df;
+  --color-card-1: #22356f;
+  --color-card-2: #0052c1;
+  --color-card-3: #76b58b;
+  --color-orange: #f9b640;
+  --color-white: #ffffff;
+  --max-width: 1440px;
+  /* Кириллица — Noto Sans; латиница — ABeeZee, как в макете */
+  --font-main: 'ABeeZee', 'Noto Sans', system-ui, sans-serif;
+  --font-body: 'Noto Sans', 'ABeeZee', system-ui, sans-serif;
+
+  /* Плавная шкала для адаптива */
+  --text-xs: clamp(0.75rem, 0.68rem + 0.35vw, 0.875rem);
+  --text-sm: clamp(0.8125rem, 0.74rem + 0.4vw, 0.9375rem);
+  --text-base: clamp(0.9375rem, 0.85rem + 0.45vw, 1.125rem);
+  --text-md: clamp(1rem, 0.88rem + 0.55vw, 1.25rem);
+  --text-lg: clamp(1.125rem, 0.95rem + 0.75vw, 1.5rem);
+  --text-xl: clamp(1.35rem, 1rem + 1.1vw, 1.875rem);
+  --text-2xl: clamp(1.65rem, 1.15rem + 1.65vw, 2.25rem);
+  --text-3xl: clamp(2rem, 1.35rem + 2.5vw, 3rem);
+  --space-section-y: clamp(2.5rem, 5vw, 5rem);
+  --space-section-x: clamp(1rem, 4vw, 2rem);
+  --header-h: clamp(4.5rem, 12vw, 6rem);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Отступ при переходе по якорю под липкой шапкой */
+#about,
+#offer,
+#services,
+#service-godovoe-to,
+#service-vyravnivanie-koles,
+#service-nastroyka-peredach,
+#rental {
+  scroll-margin-top: calc(var(--header-h) + 0.5rem);
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--color-text);
+  background: var(--color-white);
+}
+
+.app__main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.app h1,
+.app h2,
+.app h3 {
+  font-family: var(--font-main);
+}
